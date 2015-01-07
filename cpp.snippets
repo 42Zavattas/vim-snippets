@@ -1,0 +1,85 @@
+# ============================================================================ #
+#                                                                              #
+# ---------                       cpp.snippets                         ------- #
+#                                                                          1.0 #
+# ============================================================================ #
+
+# Snippets included :
+#
+#   - def................................. Basic define
+#   - inc................................. Include "" style
+#   - Inc................................. Include <> style
+#   - main................................ int main (ac, av)
+#   - once................................ 'ifndef...define' couple
+#   - canon............................... canonical class
+#   - construct........................... construct canonical class
+
+snippet def
+# define ${1}
+endsnippet
+
+snippet inc
+#include "${1}.hpp"
+endsnippet
+
+snippet Inc
+#include <${1:iostream}>
+endsnippet
+
+snippet main
+int main(int ac, char **av)
+{
+  ${VISUAL}${0:${VISUAL/(.*)/(?1::\/* code *\/)/}}
+  return (0);
+}
+endsnippet
+
+snippet once
+#ifndef ${1}
+# define $1
+
+${0}
+
+#endif
+endsnippet
+
+snippet canon
+#ifndef ${1/\w+\s*/\U$0\E/}_CLASS
+# define ${1/\w+\s*/\U$0\E/}_CLASS
+
+class $1 {
+
+  public:
+
+    ${1/\w+\s*/\u$0/} (void);
+    ${1/\w+\s*/\u$0/} (${1/\w+\s*/\u$0/} const & src);
+    ~${1/\w+\s*/\u$0/} (void);
+
+    ${1/\w+\s*/\u$0/} & operator= (${1/\w+\s*/\u$0/} const & rhs);
+
+  private:
+
+    ${0}
+
+};
+
+#endif
+endsnippet
+snippet construct
+
+#include "$1.class.hpp"
+
+$1::$1 (void) {
+  return ;
+}
+
+$1::$1 (const $1 & src) {
+  *this = src;
+  return ;
+}
+
+~$1::$1 (void) {
+  return ;
+}
+
+endsnippet
