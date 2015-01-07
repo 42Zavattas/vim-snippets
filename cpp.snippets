@@ -68,14 +68,17 @@ endsnippet
 snippet construct
 #include "$1.class.hpp"
 
-$1::$1 (void) {
+$1::$1 (void)
+{
 }
 
-$1::$1 (const $1 & src) {
+$1::$1 (const $1 & src)
+{
   *this = src;
 }
 
-$1::~$1 (void) {
+$1::~$1 (void)
+{
 }
 
 $1 & $1::operator= ($1 const & ref)
