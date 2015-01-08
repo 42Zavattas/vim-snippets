@@ -47,6 +47,13 @@ ${0}
 #endif
 endsnippet
 
+snippet method
+${1}        ${2}::${3} (${4:void}) ${5:const}
+{
+	${0}
+}
+endsnippet
+
 snippet canon
 #ifndef ${1/\w+\s*/\U$0\E/}_CLASS
 # define ${1/\w+\s*/\U$0\E/}_CLASS
