@@ -61,7 +61,7 @@ endsnippet
 snippet method
 ${1} ${2}::${3} (${4:void})${5: const}
 {
-	${0}
+  ${0}
 }
 endsnippet
 
@@ -84,6 +84,7 @@ class $1 {
     ${0}
 
 };
+
 #endif
 endsnippet
 
@@ -105,6 +106,7 @@ $1::~$1 (void)
 
 $1 & $1::operator= ($1 const & ref)
 {
+  (void) ref;
   return *this;
 }
 endsnippet
