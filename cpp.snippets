@@ -6,13 +6,16 @@
 
 # Snippets included :
 #
-#   - def................................. Basic define
+#   - def................................. Define
 #   - inc................................. Include "" style
 #   - Inc................................. Include <> style
+#   - cout................................ std::cout
 #   - main................................ int main (ac, av)
 #   - once................................ 'ifndef...define' couple
+#   - method.............................. class method
 #   - canon............................... canonical class
 #   - construct........................... construct canonical class
+
 
 snippet def
 # define ${1}
@@ -22,8 +25,16 @@ snippet inc
 #include "${1}.hpp"
 endsnippet
 
+snippet incc
+# include "${1}.hpp"
+endsnippet
+
 snippet Inc
 #include <${1:iostream}>
+endsnippet
+
+snippet Incc
+# include <${1:iostream}>
 endsnippet
 
 snippet cout
