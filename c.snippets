@@ -1,0 +1,47 @@
+# ============================================================================ #
+#                                                                              #
+# ---------                         c.snippets                         ------- #
+#                                                                          1.0 #
+# ============================================================================ #
+
+# Snippets included :
+#
+#   - def................................. Basic define
+#   - inc................................. Include "" style
+#   - Inc................................. Include <> style
+#   - main................................ int main (void)
+#   - once................................ 'ifndef...define' couple
+#   - printf.............................. So cool
+
+snippet def
+# define ${1}
+endsnippet
+
+snippet inc
+#include "${1}.h"
+endsnippet
+
+snippet Inc
+#include <${1:stdio}.h>
+endsnippet
+
+snippet main
+int main(void)
+{
+	${VISUAL}${0:${VISUAL/(.*)/(?1::\/* code *\/)/}}
+	return (0);
+}
+endsnippet
+
+snippet once
+#ifndef ${1}
+# define $1
+
+${0}
+
+#endif
+endsnippet
+
+snippet printf
+printf("${1:%s}\n"${1/([^%]|%%)*(%.)?.*/(?2:, :\);)/}$2${1/([^%]|%%)*(%.)?.*/(?2:\);)/}
+endsnippet
