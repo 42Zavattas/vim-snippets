@@ -20,3 +20,21 @@ then(function (res) {
 	${2:console.log(err);}
 });${0}
 endsnippet
+
+snippet rc
+class ${1} extends React.Component {
+
+	render () {
+		return (
+			<div className='$1'>
+				${0:$1 component}
+			</div>
+		);
+	}
+
+}
+endsnippet
+
+snippet imp
+import ${1} from '${2}';${0}
+endsnippet
