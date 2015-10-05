@@ -22,12 +22,16 @@ then(function (res) {
 endsnippet
 
 snippet rc
-class ${1} extends React.Component {
+${1:export default }class ${2:App} extends React.Component {${3:
+
+	constructor (props) {
+		super(props);
+	}}
 
 	render () {
 		return (
-			<div className='$1'>
-				${0:$1 component}
+			<div className='$2'>
+				${0:$2 component}
 			</div>
 		);
 	}
@@ -35,6 +39,21 @@ class ${1} extends React.Component {
 }
 endsnippet
 
+snippet cl
+${1:export default }class ${2} {
+
+	constructor () {
+		${0}
+	}
+
+}
+endsnippet
+
 snippet imp
 import ${1} from '${2}';${0}
+endsnippet
+
+snippet us
+'use strict';
+${0}
 endsnippet
