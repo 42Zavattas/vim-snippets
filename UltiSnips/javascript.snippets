@@ -5,27 +5,28 @@
 # ============================================================================ #
 
 snippet log
-console.log(${1:'${2}'});${0}
+console.log(${1:'${2}'})${0}
+endsnippet
 endsnippet
 
 snippet req
-var ${1} = require('${2}');${0}
+var ${1} = require('${2}')${0}
 endsnippet
 
 snippet then "Promise" i
 then(function (res) {
-	${1:console.log(res);}
+	${1:console.log(res)}
 })
 .catch(function (err) {
-	${2:console.log(err);}
-});${0}
+	${2:console.log(err)}
+})${0}
 endsnippet
 
 snippet rc
 ${1:export default }class ${2:App} extends React.Component {${3:
 
 	constructor (props) {
-		super(props);
+		super(props)
 	}}
 
 	render () {
@@ -33,7 +34,7 @@ ${1:export default }class ${2:App} extends React.Component {${3:
 			<div className='$2'>
 				${0:$2 component}
 			</div>
-		);
+		)
 	}
 
 }
@@ -50,10 +51,10 @@ ${1:export default }class ${2} {
 endsnippet
 
 snippet imp
-import ${1} from '${2}';${0}
+import ${1} from '${2}'${0}
 endsnippet
 
 snippet us
-'use strict';
+'use strict'
 ${0}
 endsnippet
