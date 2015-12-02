@@ -28,21 +28,21 @@ then(function (res) {
 endsnippet
 
 snippet rc
-${1:export default }class ${2:App} extends React.Component {${3:
+${1:import React, { Component } from 'react'
 
-	constructor (props) {
-		super(props)
-	}}
+}class ${2:App} extends Component {
 
 	render () {
 		return (
-			<div className='$2'>
-				${0:$2 component}
+			<div>
+				${4:{'${5:$2}'}}${0}
 			</div>
 		)
 	}
 
-}
+}${3:
+
+export default $2}
 endsnippet
 
 snippet cl
