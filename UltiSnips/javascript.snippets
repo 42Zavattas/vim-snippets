@@ -14,15 +14,11 @@ if (${1:condition}) {
 }
 endsnippet
 
-snippet req
-var ${1} = require('${2}')${0}
-endsnippet
-
 snippet then "Promise" i
-then(function (res) {
+then((res) => {
 	${1:console.log(res)}
 })
-.catch(function (err) {
+.catch((err) => {
 	${2:console.log(err)}
 })${0}
 endsnippet
@@ -45,22 +41,15 @@ ${1:import React, { Component } from 'react'
 export default $2}
 endsnippet
 
-snippet cl
-${1:export default }class ${2} {
-
-	constructor () {
-		${0}
-	}
-
-}
-endsnippet
-
 snippet imp
-import ${1} from '${2}'${0}
+import ${1:{ ${2} }} from '${3}'${0}
 endsnippet
 
 snippet text
-<input value={${1}} onChange={${2}} type='text'${3:
+<input
+	value={${1}}
+	onChange={${2}}
+	type='text'${3:
 	placeholder='${4}'}/>${0}
 endsnippet
 
