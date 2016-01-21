@@ -45,22 +45,6 @@ snippet imp
 import ${1:{ ${2} }} from '${3}'${0}
 endsnippet
 
-snippet text
-<input
-	value={${1}}
-	onChange={${2}}
-	type='text'${3:
-	placeholder='${4}'}/>${0}
-endsnippet
-
-snippet button
-<button onClick={${1}}>{'${2}'}</button>${0}
-endsnippet
-
-snippet link
-<a href='${1}'${2: target='_blank'}>${3:{'$4'}}</a>${0}
-endsnippet
-
-snippet dest
+snippet d
 const { ${1} } = ${0}
 endsnippet
