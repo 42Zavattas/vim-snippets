@@ -8,39 +8,6 @@ snippet log
 console.log(${1:\`${2}\`})${0}
 endsnippet
 
-snippet if
-if (${1:condition}) {
-	${0}
-}
-endsnippet
-
-snippet then "Promise" i
-then((res) => {
-	${1:console.log(res)}
-})
-.catch(err => {
-	${2:console.log(err)}
-})${0}
-endsnippet
-
-snippet action
-export const ${1} = ${2:(${3})} => dispatch => new Promise(resolve => {
-	${0}
-})
-endsnippet
-
-snippet redux
-import { handleActions } from 'redux-actions'
-
-const initial = ${1}
-
-export default handleActions({
-
-	${0}
-
-}, initial)
-endsnippet
-
 snippet rc
 ${1:import React, { Component } from 'react'
 
